@@ -7,7 +7,7 @@
     <meta name="description" content="Portafolio corporativo de Gabriel Pedreros con diseño moderno y paleta neón">
     <title>Gabriel Pedreros | Portafolio Corporativo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
@@ -30,7 +30,9 @@
                     <li><a href="#contacto" class="nav-link">Contacto</a></li>
                     <li><a href="#acerca" class="nav-link">Acerca de</a></li>
                     <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                    <li><a href="#aprendiendo" class="nav-link">Aprendiendo</a></li>
                     <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                    <li><a href="#mantenimiento" class="nav-link">Servicios Técnicos</a></li>
                 </ul>
             </nav>
         </div>
@@ -85,12 +87,12 @@
                 </div>
                 <div class="service-card">
                     <div class="service-number">03</div>
-                    <h3>SEO & Performance</h3>
-                    <p>Optimización para motores de búsqueda y máximo rendimiento</p>
+                    <h3>Desarrollo Backend</h3>
+                    <p>Servidores robustos y bases de datos optimizadas</p>
                     <div class="service-tags">
-                        <span class="tag">SEO</span>
-                        <span class="tag">Analytics</span>
-                        <span class="tag">Speed</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">APIs</span>
                     </div>
                 </div>
             </div>
@@ -101,34 +103,111 @@
     <section class="section" id="contacto">
         <div class="container">
             <h2 class="section-title">Ponte en Contacto</h2>
-            <div class="contact-wrapper">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" placeholder="Tu nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Tu email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Tu mensaje" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-                </form>
-                <div class="contact-info">
-                    <div class="info-card">
+            <p style="text-align: center; color: var(--color-texto-light); font-size: 18px; margin-bottom: 60px;">
+                ¿Tienes un proyecto en mente? Me encantaría escucharte. Contáctame a través de cualquiera de estos
+                canales.
+            </p>
+
+            <!-- Tarjetas de Contacto Rápido -->
+            <div class="contact-cards-grid">
+                <div class="contact-quick-card">
+                    <div class="quick-card-icon">
                         <i class="fas fa-envelope"></i>
-                        <h4>Email</h4>
-                        <p>gabriel@ejemplo.com</p>
                     </div>
-                    <div class="info-card">
+                    <h3>Correo Electrónico</h3>
+                    <p class="quick-card-text">g.pedreros.becerra@gmail.com</p>
+                    <a href="mailto:g.pedreros.becerra@gmail.com" class="quick-card-btn">
+                        Enviar Email <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+
+                <div class="contact-quick-card">
+                    <div class="quick-card-icon">
                         <i class="fas fa-phone"></i>
-                        <h4>Teléfono</h4>
-                        <p>+34 123 456 789</p>
                     </div>
-                    <div class="info-card">
+                    <h3>Teléfono</h3>
+                    <p class="quick-card-text">+56 9 4254 4486</p>
+                    <a href="https://wa.me/56942544486" target="_blank" class="quick-card-btn whatsapp">
+                        WhatsApp <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                <div class="contact-quick-card">
+                    <div class="quick-card-icon">
                         <i class="fas fa-map-marker-alt"></i>
-                        <h4>Ubicación</h4>
-                        <p>Colombia</p>
+                    </div>
+                    <h3>Ubicación</h3>
+                    <p class="quick-card-text">Santiago, Chile</p>
+                    <a href="https://maps.app.goo.gl/rYuaXMGip1PSkizu9" target="_blank" class="quick-card-btn">
+                        Ver Ubicación <i class="fas fa-location-dot"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Formulario Mejorado -->
+            <div class="contact-form-wrapper">
+                <h3 style="text-align: center; color: var(--color-primario); margin-bottom: 40px; font-size: 28px;">
+                    Envíame tu Mensaje
+                </h3>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" placeholder="Juan Pérez" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" placeholder="tu@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefono">Teléfono (Opcional)</label>
+                            <input type="tel" id="telefono" placeholder="+56 9 XXXX XXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="asunto">Asunto</label>
+                            <input type="text" id="asunto" placeholder="¿De qué se trata?" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" placeholder="Cuéntame más sobre tu proyecto..." rows="6"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terminos" required>
+                            <span>Acepto la política de privacidad y términos de servicio</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">
+                        Enviar Mensaje <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+
+                <!-- Información Adicional -->
+                <div class="contact-info-box">
+                    <h4>Tiempo de Respuesta</h4>
+                    <p>Generalmente respondo dentro de 24 horas durante días laborales.</p>
+                    <div class="contact-info-stats">
+                        <div class="stat">
+                            <span class="stat-number">24h</span>
+                            <span class="stat-label">Respuesta</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Disponible</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">Soporte</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -152,8 +231,8 @@
                 </div>
                 <div class="about-card">
                     <div class="card-icon"><i class="fas fa-rocket"></i></div>
-                    <h3>Optimización</h3>
-                    <p>Rendimiento y velocidad máxima para todos tus proyectos digitales.</p>
+                    <h3>Soluciones Digitales</h3>
+                    <p>Proyectos completos desde la idea hasta la implementación en producción.</p>
                 </div>
             </div>
         </div>
@@ -165,24 +244,49 @@
             <h2 class="section-title">Habilidades</h2>
             <div class="skills-grid">
                 <div class="skill">
+                    <i class="fab fa-html5"></i>
                     <h4>HTML & CSS</h4>
-                    <div class="skill-bar"><span style="width:95%"></span></div>
+                    <div class="skill-bar"><span style="width: 100%"></span></div>
                 </div>
                 <div class="skill">
+                    <i class="fab fa-js-square"></i>
                     <h4>JavaScript</h4>
-                    <div class="skill-bar"><span style="width:90%"></span></div>
+                    <div class="skill-bar"><span style="width: 60%"></span></div>
                 </div>
                 <div class="skill">
+                    <i class="fab fa-react"></i>
                     <h4>React / Vue</h4>
-                    <div class="skill-bar"><span style="width:85%"></span></div>
+                    <div class="skill-bar"><span style="width: 10%"></span></div>
                 </div>
                 <div class="skill">
+                    <i class="fab fa-angular"></i>
+                    <h4>Angular</h4>
+                    <div class="skill-bar"><span style="width: 10%"></span></div>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-js"></i>
+                    <h4>TypeScript</h4>
+                    <div class="skill-bar"><span style="width: 5%"></span></div>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-node-js"></i>
+                    <h4>Node.js</h4>
+                    <div class="skill-bar"><span style="width: 5%"></span></div>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-database"></i>
+                    <h4>SQL & MySQL</h4>
+                    <div class="skill-bar"><span style="width: 50%"></span></div>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-python"></i>
+                    <h4>Python</h4>
+                    <div class="skill-bar"><span style="width: 79%"></span></div>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-palette"></i>
                     <h4>UX/UI</h4>
-                    <div class="skill-bar"><span style="width:80%"></span></div>
-                </div>
-                <div class="skill">
-                    <h4>SEO & Performance</h4>
-                    <div class="skill-bar"><span style="width:75%"></span></div>
+                    <div class="skill-bar"><span style="width: 76%"></span></div>
                 </div>
             </div>
         </div>
@@ -191,29 +295,243 @@
     <!-- PROYECTOS -->
     <section class="section dark" id="proyectos">
         <div class="container">
-            <h2 class="section-title">Proyectos</h2>
+            <h2 class="section-title">Proyectos Destacados</h2>
             <div class="projects-grid">
+                <!-- Proyecto 1 -->
                 <article class="project-card">
-                    <img src="assets/proyecto1.jpg" alt="Proyecto 1">
+                    <div class="project-image">
+                        <img src="/assets/IMG/bazar-oregon.png" alt="Bazar el Oregon Fotografias">
+                        <div class="project-overlay">
+                            <a href="https://gabr1elpedreros.github.io/Bazar-el-oregon.fotos/" class="project-link"><i
+                                    class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
                     <div class="project-info">
-                        <h3>Proyecto Corporativo</h3>
-                        <p>Web corporativa con diseño a medida y panel administrativo.</p>
+                        <div class="project-header">
+                            <h3>Bazar el Oregon Fotografias</h3>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <p>Web de un bazar de fotografias de cuadros de graduacion con catalogo de cuadros. Diseño
+                            responsivo y navegación intuitiva.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
                     </div>
                 </article>
+
+                <!-- Proyecto 2 -->
                 <article class="project-card">
-                    <img src="assets/proyecto2.jpg" alt="Proyecto 2">
+                    <div class="project-image">
+                        <img src="/assets/IMG/legado-tp.png" alt="Legado TP">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
                     <div class="project-info">
-                        <h3>App React</h3>
-                        <p>SPA con rendimiento optimizado y experiencia móvil nativa.</p>
+                        <div class="project-header">
+                            <h3>Legado TP</h3>
+                            <span class="project-year">2024</span>
+                        </div>
+                        <p>Plataforma que conecta estudiantes, egresados y empresas mediante una bolsa de empleo
+                            moderna.
+                            Incluye backend en Flask, frontend responsivo, gestión de perfiles y publicación de ofertas.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                        </div>
                     </div>
                 </article>
+
+                <!-- Proyecto 3 -->
                 <article class="project-card">
-                    <img src="assets/proyecto3.jpg" alt="Proyecto 3">
+                    <div class="project-image">
+                        <img src="/assets/IMG/ecommerce.png" alt="E-commerce">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
                     <div class="project-info">
-                        <h3>E-commerce</h3>
-                        <p>Tienda online con pasarela de pago y gestión de inventario.</p>
+                        <div class="project-header">
+                            <h3>E-commerce Premium</h3>
+                            <span class="project-year">2024</span>
+                        </div>
+                        <p>Tienda online completa con pasarela de pago integrada, gestión de inventario en tiempo real y
+                            panel administrativo avanzado.</p>
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">React</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">APIs REST</span>
+                        </div>
                     </div>
                 </article>
+            </div>
+        </div>
+    </section>ñ
+
+    <!-- ACTUALMENTE APRENDIENDO -->
+    <section class="section" id="aprendiendo">
+        <div class="container">
+            <h2 class="section-title">Actualmente Aprendiendo</h2>
+            <div class="learning-grid">
+                <div class="learning-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Angular</h3>
+                    <p>Construyendo interfaces modernas y dinámicas</p>
+                </div>
+                <div class="learning-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Node.js & TypeScript</h3>
+                    <p>Fortaleciendo mis habilidades de backend</p>
+                </div>
+                <div class="learning-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>SQL & Bases de Datos</h3>
+                    <p>Manejo eficiente de datos</p>
+                </div>
+                <div class="learning-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Diseño Responsivo Avanzado</h3>
+                    <p>Mejora continua de UX</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS DE MANTENIMIENTO Y FORMATEO -->
+    <section class="section" id="mantenimiento">
+        <div class="container">
+            <h2 class="section-title">Servicios Técnicos</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-number">01</div>
+                    <h3>🖥️ Mantenimiento de PCs</h3>
+                    <p>Limpieza, optimización del sistema y diagnóstico de hardware para mejorar el rendimiento.</p>
+                    <div class="service-tags">
+                        <span class="tag">Diagnóstico</span>
+                        <span class="tag">Optimización</span>
+                        <span class="tag">Limpieza</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <h3>💾 Formateo y Instalación</h3>
+                    <p>Formateo profesional, instalación de Windows y drivers. Restauración completa del sistema.</p>
+                    <div class="service-tags">
+                        <span class="tag">Windows</span>
+                        <span class="tag">Drivers</span>
+                        <span class="tag">Instalación</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <h3>🔒 Limpieza de Virus</h3>
+                    <p>Eliminación de malware, virus y programas no deseados. Protección y seguridad del sistema.</p>
+                    <div class="service-tags">
+                        <span class="tag">Antivirus</span>
+                        <span class="tag">Malware</span>
+                        <span class="tag">Seguridad</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">04</div>
+                    <h3>🔧 Reparación de Hardware</h3>
+                    <p>Diagnóstico y reparación de componentes dañados. Reemplazo de piezas defectuosas.</p>
+                    <div class="service-tags">
+                        <span class="tag">Hardware</span>
+                        <span class="tag">Diagnóstico</span>
+                        <span class="tag">Reparación</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">05</div>
+                    <h3>💾 Respaldo de Datos</h3>
+                    <p>Copia de seguridad y recuperación de datos. Protección de tu información importante.</p>
+                    <div class="service-tags">
+                        <span class="tag">Backup</span>
+                        <span class="tag">Recuperación</span>
+                        <span class="tag">Cloud</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">06</div>
+                    <h3>⚡ Actualización de Componentes</h3>
+                    <p>Upgrade de RAM, SSD, procesador y otros componentes para mejorar rendimiento.</p>
+                    <div class="service-tags">
+                        <span class="tag">Upgrade</span>
+                        <span class="tag">SSD</span>
+                        <span class="tag">RAM</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla de Servicios con Precios -->
+            <div class="services-table-wrapper">
+                <h3 style="text-align: center; color: var(--color-primario); margin: 60px 0 30px;">Tabla de
+                    Servicios</h3>
+                <table class="services-table">
+                    <thead>
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Descripción</th>
+                            <th>Duración</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Mantenimiento Preventivo</strong></td>
+                            <td>Limpieza de archivos temporales y optimización</td>
+                            <td>1-2 horas</td>
+                            <td><span class="status available">Disponible</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Formateo Windows</strong></td>
+                            <td>Formateo completo e instalación de SO</td>
+                            <td>2-3 horas</td>
+                            <td><span class="status available">Disponible</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Eliminación de Virus</strong></td>
+                            <td>Escaneo profundo y eliminación de malware</td>
+                            <td>1-2 horas</td>
+                            <td><span class="status available">Disponible</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Diagnóstico Completo</strong></td>
+                            <td>Evaluación de hardware y software</td>
+                            <td>30-45 min</td>
+                            <td><span class="status available">Disponible</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Instalación de Programas</strong></td>
+                            <td>Instalación y configuración de software</td>
+                            <td>1 hora</td>
+                            <td><span class="status available">Disponible</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reparación de Hardware</strong></td>
+                            <td>Reparación o reemplazo de componentes</td>
+                            <td>Variable</td>
+                            <td><span class="status consulting">Consultar</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- CTA para contacto -->
+            <div class="service-cta">
+                <h3>¿Necesitas un servicio técnico?</h3>
+                <p>Contáctame para consultar disponibilidad y presupuestos personalizados</p>
+                <button class="btn btn-primary" onclick="scrollToSection('contacto')">
+                    Solicitar Servicio <i class="fas fa-arrow-right"></i>
+                </button>
             </div>
         </div>
     </section>
