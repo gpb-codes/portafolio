@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio corporativo de Gabriel Pedreros con diseño moderno y paleta neón">
+    <title>Gabriel Pedreros | Portafolio Corporativo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- .LOG: recreación de portafolio — 17:14 16-11-2025 -->
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">GP</span>
+                <h1>Gabriel Pedreros</h1>
+            </div>
+            <nav class="nav">
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="#acerca" class="nav-link">Acerca de</a></li>
+                    <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+                    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- INICIO (HERO) -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h2 class="hero-title">Bienvenido a mi <span class="gradient-text">Portafolio Digital</span></h2>
+            <p class="hero-subtitle">Diseño moderno, desarrollo innovador y experiencia excepcional</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary"
+                    onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})">
+                    Contactar <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="btn btn-secondary"
+                    onclick="document.getElementById('proyectos').scrollIntoView({behavior: 'smooth'})">Ver
+                    Proyectos</button>
+            </div>
+        </div>
+        <div class="hero-animation">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="section dark" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-number">01</div>
+                    <h3>Diseño Responsivo</h3>
+                    <p>Diseños que se adaptan perfectamente a cualquier dispositivo</p>
+                    <div class="service-tags">
+                        <span class="tag">Mobile</span>
+                        <span class="tag">Tablet</span>
+                        <span class="tag">Desktop</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <h3>Desarrollo Frontend</h3>
+                    <p>Código limpio y eficiente con HTML5, CSS3 y JavaScript moderno</p>
+                    <div class="service-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Vue</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <h3>SEO & Performance</h3>
+                    <p>Optimización para motores de búsqueda y máximo rendimiento</p>
+                    <div class="service-tags">
+                        <span class="tag">SEO</span>
+                        <span class="tag">Analytics</span>
+                        <span class="tag">Speed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+        <div class="container">
+            <h2 class="section-title">Ponte en Contacto</h2>
+            <div class="contact-wrapper">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Tu email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tu mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+                <div class="contact-info">
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>gabriel@ejemplo.com</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h4>Teléfono</h4>
+                        <p>+34 123 456 789</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Ubicación</h4>
+                        <p>Colombia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACERCA DE MÍ -->
+    <section class="section" id="acerca">
+        <div class="container">
+            <h2 class="section-title">Acerca de Mí</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon"><i class="fas fa-code"></i></div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Creación de sitios web modernos, responsivos y optimizados con las últimas tecnologías.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Diseño UX/UI</h3>
+                    <p>Interfaces intuitivas y atractivas que mejoran la experiencia del usuario.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Optimización</h3>
+                    <p>Rendimiento y velocidad máxima para todos tus proyectos digitales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HABILIDADES -->
+    <section class="section features-section" id="habilidades">
+        <div class="container">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <h4>HTML & CSS</h4>
+                    <div class="skill-bar"><span style="width:95%"></span></div>
+                </div>
+                <div class="skill">
+                    <h4>JavaScript</h4>
+                    <div class="skill-bar"><span style="width:90%"></span></div>
+                </div>
+                <div class="skill">
+                    <h4>React / Vue</h4>
+                    <div class="skill-bar"><span style="width:85%"></span></div>
+                </div>
+                <div class="skill">
+                    <h4>UX/UI</h4>
+                    <div class="skill-bar"><span style="width:80%"></span></div>
+                </div>
+                <div class="skill">
+                    <h4>SEO & Performance</h4>
+                    <div class="skill-bar"><span style="width:75%"></span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="section dark" id="proyectos">
+        <div class="container">
+            <h2 class="section-title">Proyectos</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <img src="assets/proyecto1.jpg" alt="Proyecto 1">
+                    <div class="project-info">
+                        <h3>Proyecto Corporativo</h3>
+                        <p>Web corporativa con diseño a medida y panel administrativo.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="assets/proyecto2.jpg" alt="Proyecto 2">
+                    <div class="project-info">
+                        <h3>App React</h3>
+                        <p>SPA con rendimiento optimizado y experiencia móvil nativa.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="assets/proyecto3.jpg" alt="Proyecto 3">
+                    <div class="project-info">
+                        <h3>E-commerce</h3>
+                        <p>Tienda online con pasarela de pago y gestión de inventario.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Gabriel Pedreros</h4>
+                    <p>Desarrollador Web & Diseñador Digital</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#acerca">Acerca de</a></li>
+                        <li><a href="#habilidades">Habilidades</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#">Diseño Web</a></li>
+                        <li><a href="#">Desarrollo</a></li>
+                        <li><a href="#">Consultoría</a></li>
+                        <li><a href="#">Mantenimiento</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gabriel Pedreros. Todos los derechos reservados. | Hecho con <i class="fas fa-heart"></i>
+                </p>
+                <div class="visit-counter">Visitas: <span id="visitCount">0</span></div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
