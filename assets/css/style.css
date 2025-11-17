@@ -170,10 +170,20 @@ body {
     gap: 6px;
     position: relative;
     z-index: 1001;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border-radius: 8px;
 }
 
 .menu-toggle:focus {
     outline: none;
+}
+
+.menu-toggle:focus-visible {
+    box-shadow: 0 0 0 4px rgba(157, 0, 255, 0.12);
 }
 
 .menu-toggle span {
@@ -194,6 +204,10 @@ body {
 
 .menu-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.nav-list {
+    transition: opacity 220ms ease, transform 220ms ease;
 }
 
 /* =================== HERO SECTION =================== */
@@ -525,6 +539,60 @@ body {
     line-height: 1.8;
     position: relative;
     z-index: 1;
+}
+
+/* =================== ABOUT: LOGO REDONDO Y ARRIBA DEL TEXTO =================== */
+.about-inner {
+    display: flex;
+    flex-direction: column;
+    /* logo arriba del texto */
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-image {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo grande y circular */
+.about-logo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    /* redondo */
+    object-fit: cover;
+    display: block;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(157, 0, 255, 0.03));
+    padding: 6px;
+    border: 4px solid rgba(255, 215, 0, 0.12);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.about-logo:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 28px 70px rgba(157, 0, 255, 0.18);
+}
+
+/* Responsive: ajustar tamaño en pantallas pequeñas */
+@media (max-width: 768px) {
+    .about-logo {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-logo {
+        width: 130px;
+        height: 130px;
+    }
 }
 
 /* =================== SERVICES GRID =================== */
@@ -1195,125 +1263,173 @@ body {
     background: linear-gradient(135deg, #00ff88, #00d66c);
 }
 
-/* =================== ANIMACIONES =================== */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* =================== ACCESIBILIDAD Y REUTILIZABLES =================== */
+:focus {
+    outline: none;
 }
 
-@keyframes fillBar {
-    from {
-        width: 0%;
-    }
-
-    to {
-        width: 100%;
-    }
+:focus-visible {
+    outline: 3px solid rgba(255, 215, 0, 0.45);
+    outline-offset: 3px;
+    border-radius: 6px;
 }
 
-/* =================== CONTACTO SIMPLIFICADO =================== */
+/* Reemplaza estilos inline del párrafo de contacto */
+.contact-intro {
+    text-align: center;
+    color: var(--color-texto-light);
+    font-size: 18px;
+    margin: 0 auto 40px;
+    max-width: 920px;
+    line-height: 1.7;
+}
+
+/* Grid principal de tarjetas */
 .contact-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    align-items: stretch;
+    margin-top: 24px;
 }
 
+/* Tarjeta individual */
 .contact-quick-card {
-    background: linear-gradient(135deg, var(--color-fondo-alt), rgba(157, 0, 255, 0.05));
-    padding: 40px 30px;
-    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(157, 0, 255, 0.03), rgba(0, 0, 0, 0.02));
     border: 1px solid var(--color-borde);
-    text-align: center;
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
+    border-radius: 14px;
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    transition: transform 260ms var(--transition), box-shadow 260ms var(--transition), border-color 260ms var(--transition);
+    min-height: 200px;
 }
 
-.contact-quick-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
-    transition: var(--transition);
-}
-
-.contact-quick-card:hover::before {
-    left: 100%;
-}
-
-.contact-quick-card:hover {
-    transform: translateY(-10px);
+/* efecto hover / focus */
+.contact-quick-card:hover,
+.contact-quick-card:focus-within {
+    transform: translateY(-8px);
     border-color: var(--color-primario);
-    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.15);
+    box-shadow: 0 18px 50px rgba(157, 0, 255, 0.12);
 }
 
+/* Icono grande */
 .quick-card-icon {
-    width: 70px;
-    height: 70px;
-    background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
-    border-radius: 12px;
+    width: 84px;
+    height: 84px;
+    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
+    font-size: 34px;
     color: var(--color-fondo);
-    margin: 0 auto 20px;
-    transition: var(--transition);
+    background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
+    box-shadow: var(--shadow-glow);
+    flex-shrink: 0;
 }
 
-.contact-quick-card:hover .quick-card-icon {
-    transform: scale(1.1) rotate(5deg);
-}
-
+/* Título y texto */
 .contact-quick-card h3 {
-    font-size: 20px;
+    margin: 0;
     color: var(--color-primario);
-    margin-bottom: 10px;
+    font-size: 18px;
     font-weight: 700;
+    text-align: center;
 }
 
 .quick-card-text {
     color: var(--color-texto-light);
-    font-size: 16px;
-    margin-bottom: 20px;
-    word-break: break-all;
+    font-size: 15px;
+    text-align: center;
+    word-break: break-word;
 }
 
+/* Botón / enlace CTA */
 .quick-card-btn {
+    margin-top: auto;
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 12px 24px;
-    background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
-    color: var(--color-fondo);
-    border-radius: 8px;
+    padding: 10px 18px;
+    border-radius: 10px;
     text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
+    font-weight: 700;
     font-size: 14px;
+    color: var(--color-fondo);
+    background: linear-gradient(135deg, var(--color-primario), var(--color-acento));
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
     border: none;
-    cursor: pointer;
 }
 
-.quick-card-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
-}
-
+/* botón whatsapp distinto */
 .quick-card-btn.whatsapp {
-    background: linear-gradient(135deg, #00ff88, #00d66c);
+    background: linear-gradient(135deg, #00c851, #00e676);
 }
+
+/* hover / focus para CTA */
+.quick-card-btn:hover,
+.quick-card-btn:focus {
+    transform: translateY(-3px);
+    filter: brightness(1.03);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+/* accesibilidad: foco visible */
+.quick-card-btn:focus-visible,
+.contact-quick-card:focus-within {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(157, 0, 255, 0.10), 0 18px 50px rgba(157, 0, 255, 0.12);
+    border-radius: 12px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+    .contact-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .quick-card-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+
+    .contact-quick-card {
+        padding: 20px;
+        min-height: 170px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-intro {
+        font-size: 15px;
+        margin-bottom: 28px;
+    }
+
+    .quick-card-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px;
+    }
+
+    .contact-quick-card {
+        padding: 16px;
+        border-radius: 10px;
+    }
+}
+
+/* Utility: asegurar que enlaces externos muestren icono correctamente */
+.contact-quick-card a .fa-whatsapp,
+.contact-quick-card a .fa-paper-plane,
+.contact-quick-card a .fa-location-dot {
+    font-size: 16px;
+}
+
+/* End contacto */
 
 /* =================== RESPONSIVE =================== */
 @media (max-width: 768px) {

@@ -16,15 +16,16 @@
     <!-- HEADER -->
     <header class="header">
         <div class="header-container">
-            <div class="logo">
+            <div class="logo" role="img" aria-label="Logo Gabriel Pedreros">
                 <span class="logo-icon">GP</span>
                 <h1>Gabriel Pedreros</h1>
             </div>
-            <nav class="nav">
-                <button class="menu-toggle" id="menuToggle">
+            <nav class="nav" role="navigation" aria-label="Menú principal">
+                <button class="menu-toggle" id="menuToggle" aria-controls="mainNav" aria-expanded="false"
+                    aria-label="Abrir menú">
                     <span></span><span></span><span></span>
                 </button>
-                <ul class="nav-list">
+                <ul class="nav-list" id="mainNav">
                     <li><a href="#inicio" class="nav-link active">Inicio</a></li>
                     <li><a href="#servicios" class="nav-link">Servicios</a></li>
                     <li><a href="#contacto" class="nav-link">Contacto</a></li>
@@ -68,34 +69,38 @@
                 <div class="service-card">
                     <div class="service-number">01</div>
                     <h3>Diseño Responsivo</h3>
-                    <p>Diseños que se adaptan perfectamente a cualquier dispositivo</p>
+                    <p>Interfaz que se adapta y mantiene usabilidad y estética en cualquier dispositivo.</p>
                     <div class="service-tags">
                         <span class="tag">Mobile</span>
                         <span class="tag">Tablet</span>
                         <span class="tag">Desktop</span>
                     </div>
                 </div>
+
                 <div class="service-card">
                     <div class="service-number">02</div>
                     <h3>Desarrollo Frontend</h3>
-                    <p>Código limpio y eficiente con HTML5, CSS3 y JavaScript moderno</p>
+                    <p>HTML, CSS y JavaScript modernos para experiencias rápidas, accesibles y mantenibles.</p>
                     <div class="service-tags">
                         <span class="tag">React</span>
-                        <span class="tag">Vue</span>
-                        <span class="tag">JavaScript</span>
+                        <span class="tag">Vanilla JS</span>
+                        <span class="tag">Componentes</span>
                     </div>
                 </div>
+
                 <div class="service-card">
                     <div class="service-number">03</div>
-                    <h3>Desarrollo Backend</h3>
-                    <p>Servidores robustos y bases de datos optimizadas</p>
+                    <h3>UX / UI & Prototipado</h3>
+                    <p>Arquitectura de información, prototipos y diseños centrados en el usuario para mejorar la
+                        conversión.</p>
                     <div class="service-tags">
-                        <span class="tag">Node.js</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">APIs</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">Prototipos</span>
+                        <span class="tag">Testing</span>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -103,114 +108,47 @@
     <section class="section" id="contacto">
         <div class="container">
             <h2 class="section-title">Ponte en Contacto</h2>
-            <p style="text-align: center; color: var(--color-texto-light); font-size: 18px; margin-bottom: 60px;">
-                ¿Tienes un proyecto en mente? Me encantaría escucharte. Contáctame a través de cualquiera de estos
-                canales.
-            </p>
+            <p class="contact-intro">¿Tienes un proyecto en mente? Me encantaría escucharte. Contáctame a través de
+                cualquiera de estos canales.</p>
 
             <!-- Tarjetas de Contacto Rápido -->
-            <div class="contact-cards-grid">
-                <div class="contact-quick-card">
-                    <div class="quick-card-icon">
+            <div class="contact-cards-grid" role="list">
+                <div class="contact-quick-card" role="listitem">
+                    <div class="quick-card-icon" aria-hidden="true">
                         <i class="fas fa-envelope"></i>
                     </div>
                     <h3>Correo Electrónico</h3>
                     <p class="quick-card-text">g.pedreros.becerra@gmail.com</p>
-                    <a href="mailto:g.pedreros.becerra@gmail.com" class="quick-card-btn">
-                        Enviar Email <i class="fas fa-paper-plane"></i>
+                    <a href="mailto:g.pedreros.becerra@gmail.com" class="quick-card-btn" rel="noopener">
+                        Enviar Email <i class="fas fa-paper-plane" aria-hidden="true"></i>
                     </a>
                 </div>
 
-                <div class="contact-quick-card">
-                    <div class="quick-card-icon">
+                <div class="contact-quick-card" role="listitem">
+                    <div class="quick-card-icon" aria-hidden="true">
                         <i class="fas fa-phone"></i>
                     </div>
                     <h3>Teléfono</h3>
                     <p class="quick-card-text">+56 9 4254 4486</p>
-                    <a href="https://wa.me/56942544486" target="_blank" class="quick-card-btn whatsapp">
-                        WhatsApp <i class="fab fa-whatsapp"></i>
+                    <a href="https://wa.me/56942544486" target="_blank" rel="noopener noreferrer"
+                        class="quick-card-btn whatsapp">
+                        WhatsApp <i class="fab fa-whatsapp" aria-hidden="true"></i>
                     </a>
                 </div>
 
-                <div class="contact-quick-card">
-                    <div class="quick-card-icon">
+                <div class="contact-quick-card" role="listitem">
+                    <div class="quick-card-icon" aria-hidden="true">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <h3>Ubicación</h3>
                     <p class="quick-card-text">Santiago, Chile</p>
-                    <a href="https://maps.app.goo.gl/rYuaXMGip1PSkizu9" target="_blank" class="quick-card-btn">
-                        Ver Ubicación <i class="fas fa-location-dot"></i>
+                    <a href="https://maps.app.goo.gl/rYuaXMGip1PSkizu9" target="_blank" rel="noopener noreferrer"
+                        class="quick-card-btn">
+                        Ver Ubicación <i class="fas fa-location-dot" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
-
-            <!-- Formulario Mejorado -->
-            <div class="contact-form-wrapper">
-                <h3 style="text-align: center; color: var(--color-primario); margin-bottom: 40px; font-size: 28px;">
-                    Envíame tu Mensaje
-                </h3>
-
-                <form class="contact-form" id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="nombre">Nombre Completo</label>
-                            <input type="text" id="nombre" placeholder="Juan Pérez" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" id="email" placeholder="tu@email.com" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="telefono">Teléfono (Opcional)</label>
-                            <input type="tel" id="telefono" placeholder="+56 9 XXXX XXXX">
-                        </div>
-                        <div class="form-group">
-                            <label for="asunto">Asunto</label>
-                            <input type="text" id="asunto" placeholder="¿De qué se trata?" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group full-width">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" placeholder="Cuéntame más sobre tu proyecto..." rows="6"
-                            required></textarea>
-                    </div>
-
-                    <div class="form-group full-width">
-                        <label class="checkbox-label">
-                            <input type="checkbox" id="terminos" required>
-                            <span>Acepto la política de privacidad y términos de servicio</span>
-                        </label>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-large">
-                        Enviar Mensaje <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
-
-                <!-- Información Adicional -->
-                <div class="contact-info-box">
-                    <h4>Tiempo de Respuesta</h4>
-                    <p>Generalmente respondo dentro de 24 horas durante días laborales.</p>
-                    <div class="contact-info-stats">
-                        <div class="stat">
-                            <span class="stat-number">24h</span>
-                            <span class="stat-label">Respuesta</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Disponible</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">Soporte</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
         </div>
     </section>
 
@@ -218,7 +156,44 @@
     <section class="section" id="acerca">
         <div class="container">
             <h2 class="section-title">Acerca de Mí</h2>
-            <div class="about-grid">
+
+            <div class="about-inner">
+                <div class="about-image">
+                    <img src="/assets/IMG/mi-logo.png" alt="Logo Gabriel Pedreros" class="about-logo">
+                </div>
+
+                <div class="about-intro">
+                    <p>
+                        Soy <strong>Gabriel Pedreros</strong>, estudiante de programación con una visión orientada al
+                        futuro
+                        y una marcada obsesión por crear experiencias digitales que combinen tecnología, estética y
+                        propósito.
+                        Mi enfoque se centra en desarrollar soluciones web eficientes, escalables y alineadas con
+                        estándares
+                        de la industria, sin perder la cuota de creatividad que transforma un proyecto correcto en uno
+                        memorable.
+                    </p>
+
+                    <p>
+                        Trabajo con herramientas como <strong>HTML, CSS, JavaScript, Python,
+                            aplicando buenas prácticas, arquitectura limpia y una mentalidad de mejora continua. Me
+                            motiva
+                            construir productos que sumen valor real, ya sea optimizando procesos, potenciando la
+                            comunicación
+                            o fortaleciendo la identidad digital de una organización.
+                    </p>
+
+                    <p>
+                        Creo en la innovación constante, en los detalles que marcan la diferencia y en que todo
+                        proyecto—bien
+                        ejecutado—puede convertirse en un case study digno de vitrina. Y sí, también creo firmemente en
+                        evitar
+                        deploys sospechosamente cerca del fin de semana… por razones estratégicas, claro.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-grid" style="margin-top:40px;">
                 <div class="about-card">
                     <div class="card-icon"><i class="fas fa-code"></i></div>
                     <h3>Desarrollo Web</h3>
@@ -332,7 +307,7 @@
                     <div class="project-info">
                         <div class="project-header">
                             <h3>Legado TP</h3>
-                            <span class="project-year">2024</span>
+                            <span class="project-year">2025</span>
                         </div>
                         <p>Plataforma que conecta estudiantes, egresados y empresas mediante una bolsa de empleo
                             moderna.
@@ -347,33 +322,9 @@
                         </div>
                     </div>
                 </article>
-
-                <!-- Proyecto 3 -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <img src="/assets/IMG/ecommerce.png" alt="E-commerce">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-header">
-                            <h3>E-commerce Premium</h3>
-                            <span class="project-year">2024</span>
-                        </div>
-                        <p>Tienda online completa con pasarela de pago integrada, gestión de inventario en tiempo real y
-                            panel administrativo avanzado.</p>
-                        <div class="project-tags">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">React</span>
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">APIs REST</span>
-                        </div>
-                    </div>
-                </article>
             </div>
         </div>
-    </section>ñ
+    </section>
 
     <!-- ACTUALMENTE APRENDIENDO -->
     <section class="section" id="aprendiendo">
@@ -470,61 +421,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Tabla de Servicios con Precios -->
-            <div class="services-table-wrapper">
-                <h3 style="text-align: center; color: var(--color-primario); margin: 60px 0 30px;">Tabla de
-                    Servicios</h3>
-                <table class="services-table">
-                    <thead>
-                        <tr>
-                            <th>Servicio</th>
-                            <th>Descripción</th>
-                            <th>Duración</th>
-                            <th>Estado</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Mantenimiento Preventivo</strong></td>
-                            <td>Limpieza de archivos temporales y optimización</td>
-                            <td>1-2 horas</td>
-                            <td><span class="status available">Disponible</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Formateo Windows</strong></td>
-                            <td>Formateo completo e instalación de SO</td>
-                            <td>2-3 horas</td>
-                            <td><span class="status available">Disponible</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Eliminación de Virus</strong></td>
-                            <td>Escaneo profundo y eliminación de malware</td>
-                            <td>1-2 horas</td>
-                            <td><span class="status available">Disponible</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Diagnóstico Completo</strong></td>
-                            <td>Evaluación de hardware y software</td>
-                            <td>30-45 min</td>
-                            <td><span class="status available">Disponible</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Instalación de Programas</strong></td>
-                            <td>Instalación y configuración de software</td>
-                            <td>1 hora</td>
-                            <td><span class="status available">Disponible</span></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Reparación de Hardware</strong></td>
-                            <td>Reparación o reemplazo de componentes</td>
-                            <td>Variable</td>
-                            <td><span class="status consulting">Consultar</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
             <!-- CTA para contacto -->
             <div class="service-cta">
                 <h3>¿Necesitas un servicio técnico?</h3>
@@ -544,10 +440,11 @@
                     <h4>Gabriel Pedreros</h4>
                     <p>Desarrollador Web & Diseñador Digital</p>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/gpb-codes" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/gabriel-ignacio-pedreros-089365357" class="social-link"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/gabrielpedreros.dev" class="social-link"><i
+                                class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -572,7 +469,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Gabriel Pedreros. Todos los derechos reservados. | Hecho con <i class="fas fa-heart"></i>
+                <p>&copy; 2025 Gabriel Pedreros. Todos los derechos reservados.</p>
                 </p>
                 <div class="visit-counter">Visitas: <span id="visitCount">0</span></div>
             </div>
